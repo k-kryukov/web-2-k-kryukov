@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Konstantin Kryukov</title>
+  <link rel="stylesheet" href="css/index.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+  <script>hljs.highlightAll();</script>
+
+  <script src="js/admin.js"></script>
+  <script src="js/socketio.js"></script>
+
+  {{> shared}}
+</head>
+<body onload="supertokens_init()">
+  <div class="container">
+    <header class="header">
+      <h1 class="header_title">Сайт-блог Константина Крюкова </h1>
+      {{> header InSession=InSession page="index"}}
+      <img class="header_photo" src="photo_small.jpg" alt="Personal photo" class="image">
+    </header>
+    <main class="main">
+      <div class="posts">
+        {{#if admin}}
+        <form class="post">
+          <input id="postTitle" class="post__title" type="text" name="title" placeholder="title">
+          <textarea id="postContent" class="post__body" name="content" placeholder="text"></textarea>
+          <button id="postSubmit" type="submit">Create</button>
+        </form>
+
+        {{#each posts}}
+        <div class="post">
+          <p class="post__title">{{title}}</p>
+          <p class="post__body">{{content}}</p>
+          <button class="post__delete" onclick="deletePost('{{id}}')">Delete</button>
+        </div>
+        {{/each}}
+
+        {{else}}
+        
+        {{#each posts}}
+        <div class="post">
+          <p class="post__title">{{title}}</p>
+          <p class="post__body">{{content}}</p>
+        </div>
+        {{/each}}
+        {{/if}}
+      </div>
+    </main>
+    {{> footer loadtime=loadtime}}
+  </div>
+  {{> modal}}
+</body>
+</html>

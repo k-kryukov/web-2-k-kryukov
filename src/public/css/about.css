@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url(reset.css);
+@import url(main.css);
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.header_title {
+  font-size: 30px;
+  color: var(--color-peer);
+  text-align: center;
+}
+@media (max-width: 330px) {
+  .header_title {
+    display: none;
+  }
+}
+.header_photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+}
+
+.section {
+  background: var(--color-background-secondary);
+  border-radius: 15px;
+  margin: 20px 40px;
+  padding: 20px;
+}
+
+.about__title {
+  color: var(--color-peer);
+  font-size: 25px;
+}
+
+.success-formula {
+  float: right;
+  background: var(--color-background-third);
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px;
+}
+.success-formula__title {
+  font-size: 25px;
+  color: var(--color-peer);
+  font-size: 16px;
+}
+.success-formula__formula {
+  color: var(--color-peer-2);
+}
+
+.hobby__titile {
+  font-size: 25px;
+  color: var(--color-peer);
+}
+
+.interests__title {
+  font-size: 25px;
+  color: var(--color-peer);
+}
+
+.code-example {
+  background: var(--color-background-third);
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+@media (max-width: 800px) {
+  .code-example {
+    display: none;
+  }
+}
+
+.blockquote {
+  position: relative;
+  background: var(--color-background);
+  border-radius: 15px;
+  margin: 0;
+  padding: 10px;
+  border: 2px solid var(--color-peer);
+}
+.blockquote__title {
+  color: var(--color-peer);
+}
+.blockquote__text {
+  font-size: 15px;
+}
+.blockquote__author {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  color: var(--color-peer-2);
+  font-size: 13px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timetable</title>
+  <link rel="stylesheet" href="css/timetable.css"/>
+  <script src="js/timetable.js"></script>
+  <script src="js/LoadTosos.js"></script>
+
+  {{> shared}}
+</head>
+<body onload="supertokens_init()">
+  <div class="container">
+    <header class="header">
+      {{> header page="timetable"}}
+    </header>
+    <main class="main">
+      <form class="timetable" id="timetable">
+        <h2  class="timetable__title">Timetable</h2>
+        <div class="timetable__days">
+          <div class="day">
+            <p class="day__title">Monday</p>
+            <ul class="day__events" id="monday"></ul>
+          </div>
+          <div class="day">
+            <p class="day__title">Tuesday</p>
+            <ul class="day__events" id="tuesday"></ul>
+          </div>
+          <div class="day">
+            <p class="day__title">Wednesday</p>
+            <ul class="day__events" id="wednesday"></ul>
+          </div>
+          <div class="day">
+            <p class="day__title">Thursday</p>
+            <ul class="day__events" id="thursday"></ul>
+          </div>
+          <div class="day">
+            <p class="day__title">Friday</p>
+            <ul class="day__events" id="friday"></ul>
+          </div>
+          <div class="day">
+            <p class="day__title">Saturday</p>
+            <ul class="day__events" id="saturday"></ul>
+          </div>
+        </div>
+        <div class="timetable__create">
+          <select class="timetable__select" id="event-select">
+            <option value="monday" selected>Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+          </select>
+          <input class="timetable__create-button" id="event-name" type="text" placeholder="Event">
+          <button class="timetable__submit" type="submit">Add</button>
+        </div>
+      </form>
+      <div class="tasks">
+        <h2 class="tasks__title">Tasks</h2>
+        <div class="tasks__items" id="tasks">
+          <div class="task-preloader"></div>
+          <div class="task-preloader"></div>
+          <div class="task-preloader"></div>
+          <div class="task-preloader"></div>
+          <div class="task-preloader"></div>
+        </div>
+      </div>
+    </main>
+    {{> footer loadtime=loadtime}}
+  </div>
+  {{> modal}}
+</body>
+</html>

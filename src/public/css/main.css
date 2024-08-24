@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url(reset.css);
+:root {
+  --color-primary: #fff;
+  --color-links: rgb(135,116,225);
+  --color-peer: #ff9380;
+  --color-peer-2: #adff2f;
+  --color-background: #212121;
+  --color-background-secondary: #0f0f0f;
+  --color-background-third: #202121;
+}
+
+html {
+  background: var(--color-background);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.body--modal-opened {
+  overflow: hidden;
+}
+
+a {
+  color: var(--color-links);
+  text-decoration: none;
+}
+
+p {
+  padding: 15px 0;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: var(--color-primary);
+  padding: 0 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.header_title {
+  font-size: 30px;
+  color: var(--color-peer);
+  text-align: center;
+}
+@media (max-width: 330px) {
+  .header_title {
+    display: none;
+  }
+}
+.header_photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+  padding: 20px 0;
+}
+.navigation__link {
+  color: var(--color-links);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  border-right: 1px solid var(--color-peer);
+  padding-right: 10px;
+}
+.navigation__link:hover {
+  color: var(--color-peer-2);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.navigation--current {
+  color: var(--color-peer-2);
+}
+.navigation :nth-child(4) {
+  border: 0;
+  padding: 0;
+}
+
+.main {
+  margin-bottom: 100px;
+}
+
+.section {
+  background: var(--color-background-secondary);
+  border-radius: 15px;
+  margin: 20px 40px;
+  padding: 20px;
+}
+
+.navbar__title {
+  font-size: 20px;
+  color: var(--color-peer);
+}
+.navbar__links {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+.navbar__link {
+  color: var(--color-links);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.modal-container {
+  z-index: 9;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal-container--focus {
+  pointer-events: all;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+.login {
+  z-index: 10;
+  pointer-events: all;
+  position: absolute;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  border-radius: 9px;
+  padding: 20px;
+  min-width: min(100vw, 400px);
+  min-height: min(100vh, 400px);
+}
+.login__title {
+  font-size: 25px;
+  text-align: center;
+}
+.login__field {
+  border: 1px solid var(--color-background-secondary);
+  border-radius: 9px;
+  padding: 5px;
+}
+.login__button {
+  background: var(--color-peer);
+  border-radius: 9px;
+  padding: 10px;
+  margin-top: 30px;
+  color: var(--color-primary);
+}
+.login--visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url(reset.css);
+@import url(main.css);
+.timetable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.timetable__title {
+  font-size: 30px;
+  color: var(--color-peer-2);
+}
+.timetable__days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.timetable__create {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  background: var(--color-background-secondary);
+  border: 2px solid var(--color-peer-2);
+  border-radius: 15px;
+  padding: 10px;
+}
+.timetable__select {
+  background: var(--color-background);
+  color: var(--color-primary);
+  border-radius: 15px;
+  padding: 10px;
+}
+.timetable__create-button {
+  background: var(--color-background);
+  color: var(--color-primary);
+  border-radius: 15px;
+  padding: 10px;
+}
+.timetable__submit {
+  background: var(--color-background);
+  color: var(--color-primary);
+  border: 2px solid var(--color-peer);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.day {
+  padding: 10px;
+  border: 2px solid var(--color-peer);
+  border-radius: 15px;
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 200px;
+}
+.day__title {
+  color: var(--color-peer);
+  text-align: center;
+  font-size: 20px;
+}
+.day__events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid var(--color-peer);
+  padding: 5px 10px;
+}
+.event__input {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: var(--color-background);
+}
+
+.task-preloader {
+  height: 50px;
+  width: 100%;
+  background: var(--color-background-secondary);
+  border-radius: 15px;
+}
+
+.tasks {
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tasks__title {
+  color: var(--color-peer-2);
+  font-size: 30px;
+}
+.tasks__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 400px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background: var(--color-background-secondary);
+  border-radius: 15px;
+  padding: 20px 10px;
+}
+.task__title {
+  padding-left: 15px;
+}

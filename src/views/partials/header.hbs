@@ -1,0 +1,26 @@
+<nav class="navigation">
+  {{#ifEquals page "index"}}
+  <a class="navigation__link navigation--current" href="/">Home</a>
+  {{else}}
+  <a class="navigation__link" href="/">Home</a>
+  {{/ifEquals}}
+
+  {{#ifEquals page "about"}}
+  <a class="navigation__link navigation--current" href="/about">About</a>
+  {{else}}
+  <a class="navigation__link" href="/about">About</a>
+  {{/ifEquals}}
+
+  {{#ifEquals page "timetable"}}
+  <a class="navigation__link navigation--current" href="timetable">Timetable</a>
+  {{else}}
+  <a class="navigation__link" href="timetable">Timetable</a>
+  {{/ifEquals}}
+
+
+  {{#if InSession}}
+  <button class="navigation__link" onclick="logout()">Log out</button>
+  {{else}}
+  <button class="navigation__link" onclick="showLogin()">Log in</button>
+  {{/if}}
+</nav>
